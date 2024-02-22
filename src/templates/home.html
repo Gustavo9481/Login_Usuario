@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+<!-- --------------------------------- Login Usuario   | templates | home  -->
+
+{% block customCSS %}
+<link href="{{ url_for('static', filename='home.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="home">
+
+    <!-- --------------------------------- sección izquierda -->
+    <section class="home-left">
+
+        <div class="home-left-parrafo">
+            <p>Proyecto sencillo de Login de Usuario con base de datos MySQL.
+
+            La app muestra en funcionamiento básico de un sistema de login 
+            para usuarios y sesiones.</p>
+            <br>
+
+            <h3>Portada (home)</h3>
+                
+                <ul>
+                    <li>Página de bienvenida, muestra una breve explicación del Proyecto</li>
+                    <li>De haber un usuario conectado, éste aparecerá debajo de la imagen del avatar</li>
+                    <li>Brinda las opciones de Login y Registro, botones que redirigen a las respectivas secciones</li>
+                </ul>
+
+            <h3>Login</h3>
+                <ul>
+                    <li>Acé se solicitan los datos básicos al usuario para acceder, como lo son:
+                        <ul>
+                            <li>nombre de usuario</li>
+                            <li>password o contraseña</li>
+                        </ul>
+                    </li>
+                    <li>En el momento de que el usuario logre loguearse, será redirigido a home</li>
+                </ul>
+
+            <h3>Registro</h3>
+                <ul>
+                    <li>Sección que permite el registro de nuevos usuarios en el caso de no estar registrados</li>
+                    <li>solicita datos como:
+                        <ul>
+                            <li>nombre completo del usuario</li>
+                            <li>usuario o palabra de como quiere ser identificado en la app</li>
+                            <li>email o correo electrónico</li>
+                            <li>password o contraseña para su ingreso</li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+
+    </section>
+  
+    <!-- ----------------------------------- sección derecha -->
+    <section class="home-right">
+
+        <figure class="home-right-user_img">
+            <img src="/static/avatar_usuario_3.svg" alt="icono de usuario">
+        </figure>
+        
+        
+     
+        <div class="home-right-user_info">
+            <p class="line-text">usuario conectado:</p> 
+            <p class="line-text current_user">{{ usuario_conectado }}</p>
+            {% if usuario_conectado %}
+            <button class="botones_a out"><a href="{{ url_for('logout') }}">Logout</a></button>
+            {% endif %}
+        </div>
+
+        <div class="home-right-buttons">
+            <button class="botones_a log"><a href="{{ url_for('login') }}">Login</a></button>
+            <button class="botones_a reg"><a href="{{ url_for('registro') }}" >Registro</a></button>
+        </div>
+
+    </section>
+          
+</div>
+
+{% endblock %}
+
+{% block footer %}
+    <a href="#">Repositorio GitHub <span class="ico-github"></span></a>
+    <a href="https://gustavo9481.github.io/Portafolio/#proyectos" 
+    target="_blank">GUScode | Portafolio <span class="ico-portfolio"></span></a>
+    <a href="{{ url_for('restringido')}}">Página Restringida <span class="ico-restringido"></span></a>
+{% endblock %}

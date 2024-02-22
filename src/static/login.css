@@ -1,0 +1,49 @@
+
+
+
+/* -------------------------------------- Login_Usuario   | static | login 󰌜 */
+
+.login {
+    margin: 1.5em auto;
+    margin-bottom: 2em;
+    padding: 5.5em;
+}
+
+.line-text-log {
+    margin-bottom: 1.5em;
+}
+
+#usuario, 
+#password {
+    margin: 0.5em auto;
+    width: 15em;
+    text-align: center;
+}
+
+#bt_login {
+    background-color: var(--azul);
+    border: 3px solid var(--azul);
+    text-shadow: 0 1px var(--azul-sombra);
+}
+
+#bt_login:hover {
+    box-shadow: inset 0 0 4px 4px var(--azul-sombra-1);
+}
+
+.error {
+    font-size: 0.9em;
+    color:  var(--rojo-sombra); 
+}
+
+
+
+/* ---------------------------------------------- mediaquerys | smartphones 󰌜 */
+
+@media screen and (max-width:480px) {
+    .login {
+        width: 85%;
+        height: 100%;
+        padding: 4em 2.5em;
+        margin-bottom: 1em;
+    }
+}

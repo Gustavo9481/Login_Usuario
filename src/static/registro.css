@@ -1,0 +1,55 @@
+
+
+
+/* ----------------------------------- Login Usuario   | static | registro 󰌜 */
+
+.registro {
+    margin: 1em auto;
+    margin-bottom: 2em;
+    padding: 2em;
+}
+
+.line-text-reg {
+    margin-bottom: 1.5em;
+}
+
+#usuario, 
+#password,
+#nombre,
+#email {
+    margin: 0.1em auto;
+    width: 20em;
+    text-align: left;
+    text-indent: 2em;
+}
+
+#bt_registro {
+    background-color: var(--naranja);
+    border: 3px solid var(--naranja);
+    text-shadow: 0 1px var(--naranja-sombra);
+}
+
+#bt_registro:hover {
+    box-shadow: inset 0 0 4px 4px var(--naranja-sombra);
+}
+
+/* smartphones */
+
+@media screen and (max-width:480px) {
+    .registro {
+        width: 85%;
+        height: 100%;
+        padding: 1.5em 2.5em;
+        margin-bottom: 1em;
+    }
+
+    
+    #usuario, 
+    #password,
+    #nombre,
+    #email {
+        width: 17em;
+    }
+
+
+}

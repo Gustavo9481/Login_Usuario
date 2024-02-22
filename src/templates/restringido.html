@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Restringido{% endblock %}
+
+<!-- ------------------------------------------- Login Usuario | home.html  -->
+
+{% block customCSS %}
+<link href="{{ url_for('static', filename='restringido.css') }}" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="restringido">
+
+    <!-- --------------------------------- sección izquierda -->
+    <section class="restringido-left">
+        <img src="/static/avatar_restringido.svg" alt="ilustración de hombre tomando café">
+    </section>
+    
+    <!-- ----------------------------------- sección derecha -->
+    <section class="restringido-right">
+
+        <h2>Página Restringida <span class="ico-restringido"></span></h2>
+        <br>
+        <p>Para acceder a ésta página el usuario debe hacer login y sus datos deben ser 
+        correctamente validados.</p>
+        <br>
+        <p>Si No esxiste el usuario, puede registrar uno nuevo <a href="{{ url_for('registro')}}">aquí</a>.</p>
+        <br>
+        {% if usuario_conectado %}
+        <div class="out-center">
+            <button class="botones_a out"><a href="{{ url_for('logout') }}">Logout</a></button>
+        </div>
+        {% endif %}
+
+    </section>
+          
+</div>
+
+{% endblock %}
+
+{% block footer %}
+    <a href="#">Repositorio GitHub <span class="ico-github"></span></a>
+    <a href="https://gustavo9481.github.io/Portafolio/#proyectos" 
+    target="_blank">GUScode | Portafolio <span class="ico-portfolio"></span></a>
+    <a href="{{ url_for('home') }}">home <span class="ico-home"></span></a>
+{% endblock %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- --------------------------------- Login Usuario   | templates | base  -->
+
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+        {% block customCSS %}{% endblock %}
+    </head>
+    
+    <body>
+        <div class="titulo">
+            <h1>Proyecto Login Usuario - flask</h1>
+            <img src="/static/Flask.svg" alt="logo framework flask" class="titulo-logo">
+        </div>    
+        {% block content %}
+
+        {% endblock %}
+    </body>
+
+    <footer class="footer">
+        {% block footer %}{% endblock %}
+    </footer>
+
+</html>

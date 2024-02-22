@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Registro{% endblock %}
+
+<!-- ----------------------------- Login Usuario   | templates | registro  -->
+
+{% block customCSS %}
+<link href="{{ url_for('static', filename='registro.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="form-box">
+
+    <section class="form registro">
+        
+        <h3>Registro de Nuevo usuario</h3>
+        <p class="line-text line-text-reg">Ingrese sus datos para registrarse como usuario</p>
+
+        <form action="" method="POST">
+
+            <div class="inputs">
+
+            {{ form.hidden_tag() }}
+
+            {{ form.nombre(size=50, placeholder="Nombre completo")}}
+
+            <br>
+
+            {{ form.usuario(size=20, placeholder="Usuario")}}
+
+            <br>
+
+            {{ form.email(placeholder="Email") }}
+
+            <br>
+        
+            {{ form.password(placeholder="Contraseña") }}
+
+            <br>
+
+            </div>
+
+            <div class="botones">{{ form.bt_registro }}</div>
+
+        </form>
+
+    </section>
+
+</div>
+
+{% endblock %}
+
+{% block footer %}
+    <a href="{{ url_for('home') }}">home <span class="ico-home"></span></a>
+{% endblock %}

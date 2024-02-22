@@ -1,0 +1,301 @@
+
+
+
+/* ------------------------------------- Login Usuario   | static | styles 󰌜 */
+/* Estilos generales y variables globales */
+
+
+/* ---------------------------------------------- fuentes */
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('Fuente/OpenSans-Regular.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('Fuente/FiraCodeNerdFont-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+
+
+/* ----------------------------------- variables globales */
+
+:root {
+
+    /* Paleta de Colores */
+    --claro: lch(97.08% 2.6 277.3);
+    --medio: lch(87.08% 2.6 277.3);
+    --sombra-1: lch(77.08% 2.6 277.3);
+    --sombra-2: lch(57.08% 2.6 277.3);
+    --oscuro: lch(20.08% 2.6 277.3);
+    --azul: lch(47.08% 33.6 277.3);
+    --azul-sombra: lch(27.08% 33.6 277.3);
+    --azul-sombra-1: lch(40.08% 33.6 277.3);
+    --naranja: lch(65.08% 80.6 57.3);
+    --naranja-sombra: lch(58.08% 80.6 57.3);
+    --naranja-sombra-1: lch(40.08% 80.6 57.3);
+    --rojo: lch(43.08% 55.3 8.52);
+    --rojo-sombra: lch(33.08% 55.3 8.52);
+
+    /* Fuentes */
+    --fuente-texto: 'Open Sans'; 
+    --fuente-iconos: 'Fira Code';
+}
+
+
+
+/* -------------------------------------------- reset css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    scroll-behavior: smooth;
+    background-color: var(--medio);
+    font-family: var(--fuente-texto);
+    color: var(--oscuro);
+}
+
+body {
+    min-height: 100dvh;
+}
+
+h1, h2, h3, h4 {
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+
+
+/* ------------------------------------------------------ estilos generales 󰌜 */
+
+.titulo {
+    width: 100%;
+    margin: 1em auto;
+    margin-top: 2em;
+    text-align: center;
+
+    h1 {
+        display: inline-block;
+    }
+}
+
+.titulo-logo {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin-left: 1em;
+}
+
+.form-box {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.line-text {
+    display: block;
+    width: 100%;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+}
+
+
+
+/* --------------------------- botones | Login - Registro */
+
+.form {
+    border-radius: 7%;
+    box-shadow: 
+        9.91px 9.91px 18px var(--sombra-1), 
+        -9.91px -9.91px 18px var(--claro);
+    width: 30%;
+    height: 28em;
+    text-align: center;
+
+} 
+
+.inputs {
+    input {
+        display: block;
+        background-color: var(--claro);
+        border: 1px solid var(--sombra-2);
+        border-radius: 3em;
+        height: 2.5em;
+        text-transform: none;
+    }
+}
+
+.botones {
+
+    input {
+        display: block;
+        margin: 1em auto;
+        outline: none;
+        cursor: pointer;
+        width: 15em;
+        height: 3em;
+        box-shadow: 7px 7px 18px var(--sombra-1), -7px -7px 18px var(--claro);
+        border-radius: 30px;
+        transition: all 0.2s ease;
+        color: var(--claro);
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+.botones {
+
+    input:hover {
+        box-shadow: 
+            0 4px 3px 1px var(--claro), 
+            0 6px 8px var(--sombra-1), 
+            0 -4px 4px var(--sombra-1), 
+            0 -6px 4px var(--claro);
+    }
+}
+
+.botones_a {
+    display: block;
+    margin: 1em auto;
+    outline: none;
+    cursor: pointer;
+    width: 17em;
+    height: 3em;
+    box-shadow: 7px 7px 18px var(--sombra-1), -7px -7px 18px var(--claro);
+    border-radius: 30px;
+    transition: all 0.2s ease;
+    text-shadow: 0 1px var(--claro);
+    text-align: center;
+
+    a {
+        display: block;
+        background-color: transparent !important;
+        width: 100%;
+        height: 100%;
+        padding-top: 0.5em; 
+        text-decoration: None;
+        font-weight: 600;
+        align-items: center;
+    }
+}
+
+.botones_a:hover {
+    box-shadow: 
+        0 4px 3px 1px var(--claro), 
+        0 6px 8px var(--sombra-1), 
+        0 -4px 4px var(--sombra-1), 
+        0 -6px 4px var(--claro), 
+        /*inset 0 0 3px 3px var(--sombra-1);*/
+}
+
+.out {
+    display: inline-block !important;
+    margin: 1em auto;
+    width: 5em;
+    height: 2em;
+    border: 2px solid var(--sombra-1);
+    background-color: var(--medio);
+
+    a {
+        padding-top: 0.2em !important;
+        font-size: 0.8em;
+        color: var(--oscuro);
+        text-shadow: var(--sombra-1);
+    }
+}
+
+.out:hover {
+    box-shadow: inset 0 0 4px 4px var(--sombra-1);
+}
+
+
+
+/* -------------------------------------------- footer | menú pie de página 󰌜 */
+
+.ico-github::before {
+    font-family: var(--fuente-iconos);
+    font-size: 1.3em;
+    background-color: transparent;
+    content: " ";
+    color: var(--oscuro);
+}
+
+.ico-portfolio::before {
+    font-family: var(--fuente-iconos);
+    font-size: 1.3em;
+    background-color: transparent;
+    content: " ";
+    color: var(--oscuro);
+}
+
+.ico-restringido::before {
+    font-family: var(--fuente-iconos);
+    font-size: 1.3em;
+    background-color: transparent;
+    content: "󰌾 ";
+    color: var(--oscuro);
+}
+
+.ico-home::before {
+    font-family: var(--fuente-iconos);
+    font-size: 1.3em;
+    background-color: transparent;
+    content: " ";
+    color: var(--oscuro);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em auto;
+
+    a {
+        text-decoration: None;
+        padding: 0.3em 2em;
+    }
+
+    a:hover {
+        font-weight: 600;
+        color: var(--azul);
+    }
+}
+
+a:hover .ico-github::before, 
+a:hover .ico-portfolio::before,
+a:hover .ico-restringido::before,
+a:hover .ico-home::before {
+    color: var(--azul);
+}
+
+
+
+/* ---------------------------------------------- mediaquerys | smartphones 󰌜 */ 
+
+@media screen and (max-width:480px) {
+    .titulo {
+        width: 100%; 
+
+        h1 { font-size: 1.3em; }
+    }
+
+    .footer {
+        margin: 2em auto;
+
+        a {
+            font-size: 0.6em;
+        }
+    }
+
+    .out-center {
+        text-align: center;
+    }
+
+}

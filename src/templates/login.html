@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+<!-- -------------------------------- Login Usuario   | templates | login  -->
+
+{% block customCSS %}
+<link href="{{ url_for('static', filename='login.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="form-box">
+
+    <section class="form login">
+        
+        <h3>Login de usuario</h2>
+        <p class="line-text line-text-log">Ingrese sus datos de usuario para acceder</p>
+        <form action="" method="POST">
+            <div class="inputs"> 
+
+            {{ form.hidden_tag() }}
+
+            {{ form.usuario(size=20, placeholder="Usuario")}} 
+        
+            <br>
+        
+            {{ form.password(placeholder="Contraseña") }}
+        
+            <br>
+            </div>
+
+            <div class="botones">{{ form.bt_login }}</div>
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <span class="error">{{ message }}</span>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+        </form>
+
+        <br>
+
+</section>
+
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+    <a href="{{ url_for('home') }}">home <span class="ico-home"></span></a>
+{% endblock %}
