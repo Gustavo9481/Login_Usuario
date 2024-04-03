@@ -12,7 +12,7 @@ Proyecto sencillo usando el framework Flask sobre Login de Usuario con base de d
 La app muestra en funcionamiento básico de un sistema de login 
 para usuarios y sesiones.
 
-<div style="display: flex; justify-content: center;">
+<div style="{display: flex; justify-content: center;}">
 <a href="https://www.youtube.com/watch?v=6OaqKAKidig&t" target="_blank">
     <img src="mq2.webp" alt="usuario" width="400" style="background-color:white"/>
 </a>
