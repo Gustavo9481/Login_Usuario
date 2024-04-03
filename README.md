@@ -15,6 +15,8 @@ para usuarios y sesiones.
 <a href="https://www.youtube.com/watch?v=6OaqKAKidig&t=4s">
     <img src="mq2.webp" alt="usuario" width="400" style="background-color:white"/>
 </a>
+
+
 ### Portada (home)
 + Página de bienvenida, muestra una breve explicación del Proyecto.
 + De haber un usuario conectado, éste aparecerá debajo de la imagen 
