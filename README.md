@@ -12,6 +12,8 @@ Proyecto sencillo usando el framework Flask sobre Login de Usuario con base de d
 La app muestra en funcionamiento básico de un sistema de login 
 para usuarios y sesiones.
 
+[![Alt text](https://img.youtube.com/vi/configuroweb/0.jpg)](https://www.youtube.com/watch?v=6OaqKAKidig)
+
 ### Portada (home)
 + Página de bienvenida, muestra una breve explicación del Proyecto.
 + De haber un usuario conectado, éste aparecerá debajo de la imagen 
